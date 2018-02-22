@@ -3018,12 +3018,8 @@ describe('Select', () => {
 					});
 				});
 
-				it('sets the className and id on the placeholder for the input', () => {
-
-					expect(ReactDOM.findDOMNode(instance).querySelector('.extra-class-name'),
-						'to have attributes', {
-							id: 'search-input-id'
-						});
+				it('does not render the input', () => {
+					expect(ReactDOM.findDOMNode(instance).querySelector('.extra-class-name'), 'to equal', null);
 				});
 			});
 

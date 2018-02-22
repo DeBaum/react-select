@@ -1175,7 +1175,7 @@ class Select extends React.Component {
 				>
 					<span className="Select-multi-value-wrapper" id={`${this._instancePrefix}-value`}>
 						{this.renderValue(valueArray, isOpen)}
-						{this.renderInput(valueArray, focusedOptionIndex)}
+						{this.props.searchable ? this.renderInput(valueArray, focusedOptionIndex) : null}
 					</span>
 					{removeMessage}
 					{this.renderLoading()}
